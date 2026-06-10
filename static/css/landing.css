@@ -1,0 +1,275 @@
+/* ------------------------------------------------------------------ */
+/* Hero — landing page overrides                                       */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    max-width: 680px;
+    margin: 0 auto;
+    gap: 0;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    color: var(--ink-soft);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 1.75rem;
+}
+
+.hero-badge-dot {
+    color: #22c55e;
+    font-size: 0.55rem;
+    line-height: 1;
+}
+
+.hero-title {
+    font-family: var(--font-body);
+    font-size: clamp(2.6rem, 7vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+}
+
+.hero-title-green {
+    display: block;
+    color: #22c55e;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Pill buttons                                                        */
+/* ------------------------------------------------------------------ */
+
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.btn-pill-dark {
+    display: inline-block;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-pill-dark:hover {
+    background: var(--accent);
+}
+
+/* ------------------------------------------------------------------ */
+/* Mock card v2                                                        */
+/* ------------------------------------------------------------------ */
+
+.hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mock-card-v2 {
+    background: #f3f4f6;
+    border-radius: 20px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
+    padding: 1.25rem 1.25rem 1.5rem;
+    width: 100%;
+    max-width: 580px;
+    text-align: left;
+}
+
+.mock-dots {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.mock-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.mock-dot-red    { background: #ef4444; }
+.mock-dot-yellow { background: #f59e0b; }
+.mock-dot-green  { background: #22c55e; }
+
+/* Stat rows */
+.mock-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.mock-stat-row {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.875rem 1rem;
+}
+
+.mock-stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.15rem;
+}
+
+.mock-stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.15rem;
+    font-family: var(--font-body);
+}
+
+.mock-stat-change {
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.mock-stat-change.positive { color: #22c55e; }
+.mock-stat-change.muted    { color: #9ca3af; }
+
+/* Category bars */
+.mock-cats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.mock-cat-row {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.mock-cat-label {
+    font-size: 0.78rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+.mock-cat-track {
+    height: 8px;
+    background: #d1d5db;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mock-cat-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-orange { background: #f59e0b; }
+.bar-blue   { background: #3b82f6; }
+.bar-purple { background: #8b5cf6; }
+
+/* ------------------------------------------------------------------ */
+/* Modal                                                               */
+/* ------------------------------------------------------------------ */
+
+.how-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.how-modal-overlay.is-open {
+    display: flex;
+}
+
+.how-modal-box {
+    position: relative;
+    background: #000;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 860px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.how-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.875rem;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.how-modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.how-modal-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.how-modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero { padding: 3rem 1.25rem 2.5rem; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .btn-pill-dark { width: 100%; text-align: center; }
+}
